@@ -1,6 +1,5 @@
 name: Build ASP.NET Web Forms
 
-# מאפשר להריץ ידנית וגם אחרי push ל-main
 on:
   push:
     branches: [ main ]
@@ -11,22 +10,16 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    # בדיקת קוד מהריפוזיטורי
-    - name: Checkout repository
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-    # התקנת MSBuild אם צריך (לרוב כבר מותקן ב-windows-latest)
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1
 
-    # Restore NuGet packages
     - name: Restore NuGet packages
       run: nuget restore "tabaShacharDoronBible.sln"
 
-    # Build ה-solution
     - name: Build solution
       run: msbuild "tabaShacharDoronBible.sln" /p:Configuration=Release /t:Build
 
-    # Publish (optional) - יוצא לתיקייה ./publish
-    - name: Publish
-      run: msbuild "tabaShacharDoronBible.sln" /p:Configuration=Release /p:DeployOnBui
+    - name: Publish to folder
+      run: msbuild "tabaShacharDoronBible.sln" /p:Configuration=Release /p:DeployOnBuild=true /p:PublishDir=publish
