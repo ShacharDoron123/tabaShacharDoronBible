@@ -139,7 +139,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Gallery.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="index.js" />
     <Content Include="JavaScript.aspx" />
     <Content Include="login.aspx" />
     <Content Include="logOut.aspx" />

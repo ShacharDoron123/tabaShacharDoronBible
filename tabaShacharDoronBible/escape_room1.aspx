@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      <style>
      .quiz-container h2 {
+
          text-align: center;
      }
 
@@ -9,6 +10,8 @@
          margin: 10px 0;
          font-size: 18px;
      }
+
+
 
      .submit-btn {
          margin-top: 20px;
