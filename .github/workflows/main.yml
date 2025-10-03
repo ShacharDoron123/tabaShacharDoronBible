@@ -1,8 +1,10 @@
 name: Build ASP.NET Web Forms
 
+# Trigger on push to main **and** manual run
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
