@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="tabaShacharDoronBible.master" %>
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>צופן התנ"ך</title>
+    <link rel="stylesheet" href="master.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+    function myTimer() {
+        var d = new Date();
+        var t = d.toLocaleTimeString();
+        document.getElementById("myTime").innerHTML = t;
+    }
+    setInterval(myTimer, 1000);
+</script>
+</head>
+<body>
+    <table class="mpTable">
+        <tr>
+            <td class="mpHeader">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 350px; text-align: right; padding-right: 20px;">
+                            <%= loginMsg %>
+                        </td>
+                        <td style="text-align: center; width: 100%;">
+                            <h1>צופן התנ"ך</h1>
+                            <h2 id="myTime" class="left"></h2>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li><a href="main.aspx">דף הבית</a></li>
+                        <li class="dropdown">
+                            <button class="dropbtn">פרקים 
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="chapter1.aspx">פרק א</a>
+                                <a href="chapter2.aspx">פרק ב</a>
+                                <a href="chapter3.aspx">פרק ג</a>
+                            </div>
+                        </li>
+                        <li><a href="reflection.aspx">רפלקציה</a></li>
+                        <li><a href="quiz.aspx">חידון</a></li>
+                        <li><a href="login.aspx">התחברות</a></li>
+                        <li><a href="register.aspx">הרשמה</a></li>
+                        <li><a href="Gallery.aspx">גלרייה</a></li>
+                        <li><a href="Schedule.aspx">מערכת שעות</a></li>
+                        <li><a href="select.aspx">select</a></li>
+                    </ul>
+                </nav>
+            </td>
+        </tr>
+        <tr>
+            <td class="mpMainPage">
+                <!-- ~~~~~~~~~~~~~~ Body Place Holder ~~~~~~~~~~~~~~~~~~~~ -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            </td>
+        </tr>
+        <tr>
+            <td class="mpMenu">
+                האתר נבנה על ידי שחר דורון
+                <a href="mailto:shachar08.doron@gmail.com">shachar08.doron@gmail.com</a>
+                <a href="About.aspx">אודות</a>
+                <a href="adminManage.aspx">מנהל</a>
+                <a href="escape_room1.aspx">חדר בריחה</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

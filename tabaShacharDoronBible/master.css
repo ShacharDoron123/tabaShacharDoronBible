@@ -1,0 +1,216 @@
+﻿body {
+    background-color: #f3e4d3;
+    width: auto;
+    direction: rtl;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 55pt;
+}
+
+h2 {
+    text-align: center;
+    font-size: 45pt;
+}
+
+h3 {
+    text-align: center;
+    font-size: 40pt;
+}
+
+p {
+    font-size: 35pt;
+}
+
+.navbar {
+    display: flex; 
+    justify-content: center;
+    background-color: #7d5436;
+    border-bottom: 1px solid silver;
+    padding: 0; 
+}
+
+    .navbar .nav-list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        .navbar .nav-list li {
+            margin: 0 10px;
+        }
+
+        .navbar .nav-list a {
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+            .navbar .nav-list a:hover {
+                background-color: #111;
+            }
+
+
+ul {
+    list-style-type: none;
+    margin: 0 auto; 
+    padding: 0;
+    overflow: hidden;
+    background-color: #7d5436;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    float: none; 
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+
+.mpTable {
+    width: 100%;
+    border: 1px solid silver;
+}
+
+.mpHeder {
+    width: 100%;
+    border: 1px solid silver;
+    height: 30px;
+    text-align: center;
+}
+
+.mpMenu {
+    width: 100%;
+    border: 1px solid silver;
+    height: 20px;
+    text-align: center;
+}
+
+.mpMainPage {
+    width: 100%;
+    border: 1px solid silver;
+    height: 400px;
+}
+
+
+div {
+    text-align: center;
+}
+
+
+.dropdown {
+    display: inline-block; 
+    overflow: hidden;
+}
+
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #111;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #7d5436;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #111;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.right {
+    text-align: right;
+}
+
+.scrollable-text {
+    width: 300px;
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: width 0.3s ease;
+}
+
+    .scrollable-text.expanded {
+        width: 100%;
+    }
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+.right {
+    text-align: right
+}
+
+form {
+    text-align: center;
+}
+
+.area {
+    font-size: 30px;
+    text-align: center;
+}
+.left{
+text-align:left
+}
